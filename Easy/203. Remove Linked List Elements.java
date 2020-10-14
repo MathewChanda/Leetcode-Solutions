@@ -13,9 +13,11 @@
 
 What I need to improve on
     - Determining what nodes need to be iterate 
+    - Edge cases of vals and nodes i.e if the unwanted val is at the beginning and empty node/single node 
     
 What I struggle with 
     - Which node that I need to start in my while loop 
+    - what to do when node is null or the beginning node contains the unwanted value 
 */ 
 
 class Solution {
