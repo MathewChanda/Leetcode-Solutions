@@ -38,7 +38,6 @@ class Solution {
             head = head.next; 
         }
         
-        
         // skip the first node in the starter node 
         return dummy.next; 
     }
