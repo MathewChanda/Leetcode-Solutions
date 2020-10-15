@@ -13,32 +13,43 @@
 
 What I need to improve on
     - Determining what nodes need to be iterate 
+    - Edge cases of vals and nodes i.e if the unwanted val is at the beginning and empty node/single node 
     
 What I struggle with 
     - Which node that I need to start in my while loop 
+    - what to do when node is null or the beginning node contains the unwanted value 
 */ 
 
 class Solution {
     public ListNode removeElements(ListNode head, int val) {
-        // First, we need to make a dummy node because the first node can contain the unwanted value. 
-        // We have a while loop that continues to iterate through the whole list until we hit a tail node or node where it's next         //  node is null
-        // within the while loop, if we encounter the unwanted value as the next node, we must set the current node next node to
-        // the node after the unwanted node 
-        // Finally, we must get the following node after dummy node since we want to ignore the first node of the newly created n         //   node 
-        
-        // Make starter linked list 
-        ListNode dummy = new ListNode(-1, head);
-        
-        // Iterate through the linked list of the head node 
-        while(head != null){
-            if(head.next.val == val){
-                head.next = head.next.next; 
-            }
-            
+       /*
+           Replaces the node until the new head is not the unwanted value 
+        */ 
+        while(head != null && head.val == val){ 
             head = head.next; 
         }
         
-        // skip the first node in the starter node 
-        return dummy.next; 
+        
+        
+        // linked list is created with reference to the param linked list 
+        ListNode currentNode = head; 
+        
+        // Traversing the linked list
+        // Need to check if the node and after are not null
+        while(currentNode != null && currentNode.next != null){
+            // if the next node contains val 
+            if(currentNode.next.val == val){
+                // point to the following node 
+                currentNode.next = currentNode.next.next; 
+            }
+            
+            // else move the pointer 
+            else{
+                  currentNode = currentNode.next; 
+            }
+        }
+        
+        
+        return head; 
     }
 }
