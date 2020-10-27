@@ -23,10 +23,6 @@ What I struggle
 
 What I learned 
     - When the fast pointer is twice the speed of the slow pointer, fast pointer will reach the end of the linked list when slow node at the half way point. 
-    - 
-
-
-
 **/ 
 class Solution {
     public boolean isPalindrome(ListNode head) {
