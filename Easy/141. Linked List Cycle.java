@@ -16,9 +16,7 @@
         condition is what the node contains in the linked list such as being null
 */ 
 
-
-
-public class Solution {
+class Solution {
     public boolean hasCycle(ListNode head) {
         /*
             The first pointer that goes one node at the time. 
