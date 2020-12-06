@@ -18,7 +18,7 @@ What I need to improve on
     
     - Referencing head and changing that variable that referenced head will change head at the same. It will not move where head is at as well. 
     - We checking for head.next != null when we are doing any operations with head.next.next. 
-   
+    - head = head.next removes the current reference and makes the next node as the current node. 
     
 What I struggle with 
     - Which node that I need to start in my while loop 
@@ -58,3 +58,4 @@ class Solution {
         return head; 
     }
 }
+
