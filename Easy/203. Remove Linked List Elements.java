@@ -15,6 +15,11 @@ What I need to improve on
     - Determining what nodes need to be iterate 
     - Edge cases of vals and nodes i.e if the unwanted val is at the beginning and empty node/single node 
     
+    
+    - Referencing head and changing that variable that referenced head will change head at the same. It will not move where head is at as well. 
+    - We checking for head.next != null when we are doing any operations with head.next.next. 
+   
+    
 What I struggle with 
     - Which node that I need to start in my while loop 
     - what to do when node is null or the beginning node contains the unwanted value 
